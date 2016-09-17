@@ -8,13 +8,13 @@ Lester,false
 Bill Gates,false
 Steve Jobs,false
 Jim Carrey,false
+Eva Longoria,false
+Tom Brady,false
+Gwynet Paltrow,false
+Jennifer Aniston,false
+Ben Affleck,false
 Carlos y Valeria,true
 Beyonce y Jay-z,true
 Angelina Jolie y Brad pitt,true
 Calista Flockhart y Harrison Ford,true
 Emma Stone y Andrew Garfield,true
-Eva Longoria y Tony Parker,true
-Gisele Bundchen y Tom Brady,true
-Gwynet Paltrow y Chris Martin,true
-Jennifer Aniston y Justin Theroux,true
-Jennifer Garner y Ben Affleck,true
