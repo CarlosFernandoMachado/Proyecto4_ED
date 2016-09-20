@@ -43,15 +43,6 @@ public class Proyecto_4 {
             } else {
                 limitarparejas = false;
             }
-            ArrayList<Persona> parejas = new ArrayList();
-            if (limitarparejas) {
-                for (int i = 0; i < Personas.size(); i++) {
-                    if (Personas.get(i).isPareja()) {
-                        parejas.add(Personas.get(i));
-                        Personas.remove(i);
-                    }
-                }
-            }
             while (Descanso < 0) {
                 System.out.print("Por cuantos turnos desea que un lider descanse? ");
                 Descanso = sc.nextInt();
@@ -67,9 +58,76 @@ public class Proyecto_4 {
             for (int i = 0; i < cantgrupos; i++) {
                 temp = optimolider(Personas);
                 Persona lider = Personas.remove(temp);
-                for (int j = 0; j < Personas.size(); j++) {
-                    
+                Grupo nuevogrupo = new Grupo();
+                nuevogrupo.add(lider);
+                if (limitarparejas) {
+                    if (!nuevogrupo.tienepareja()) {
+                        for (int j = 0; j < Personas.size(); j++) {
+                            if (Personas.get(j).isPareja() && !Personas.get(j).conoce(lider)) {
+                                nuevogrupo.add(Personas.remove(j));
+                                break;
+                            }
+                        }
+                        if (!nuevogrupo.tienepareja()) {
+                            for (int j = 0; j < Personas.size(); j++) {
+                                if (Personas.get(j).isPareja()) {
+                                    nuevogrupo.add(Personas.remove(j));
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (integrantes > nuevogrupo.getPeso()) {
+                        temp = integrantes - nuevogrupo.getPeso();
+                        for (int j = 0; j < temp; j++) {
+                            for (int k = 0; k < Personas.size(); k++) {
+                                if (!Personas.get(k).conoce(lider) && !Personas.get(i).isPareja()) {
+                                    nuevogrupo.add(Personas.remove(k));
+                                    break;
+                                }
+                            }
+                        }
+                        if (integrantes > nuevogrupo.getPeso()) {
+                            temp = integrantes - nuevogrupo.getPeso();
+                            for (int j = 0; j < temp; j++) {
+                                for (int k = 0; k < Personas.size(); k++) {
+                                    if (!Personas.get(i).isPareja()) {
+                                        nuevogrupo.add(Personas.remove(k));
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (integrantes > nuevogrupo.getPeso()) {
+                        temp = integrantes - nuevogrupo.getPeso();
+                        for (int j = 0; j < temp; j++) {
+                            for (int k = 0; k < Personas.size(); k++) {
+                                if (!Personas.get(k).conoce(lider)) {
+                                    nuevogrupo.add(Personas.remove(k));
+                                    break;
+                                }
+                            }
+                        }
+                        if (integrantes > nuevogrupo.getPeso()) {
+                            temp = integrantes - nuevogrupo.getPeso();
+                            for (int j = 0; j < temp; j++) {
+                                for (int k = 0; k < Personas.size(); k++) {
+                                    nuevogrupo.add(Personas.remove(k));
+                                    break;
+                                }
+                            }
+                        }
+                    }
                 }
+                grupos.add(nuevogrupo);
+            }
+            for (int i = 0; i < grupos.size(); i++) {
+                grupos.get(i).imprimir();
+                grupos.get(i).getlider().setContLider(Descanso);
+                grupos.get(i).presentar();
+                System.out.println("");
             }
         }
     }

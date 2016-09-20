@@ -5,14 +5,14 @@ Bryan,false
 Oscar,false
 Inti,false
 Lester,false
-Bill Gates,false
-Steve Jobs,false
-Jim Carrey,false
-Eva Longoria,false
-Tom Brady,false
-Gwynet Paltrow,false
-Jennifer Aniston,false
-Ben Affleck,false
+Bill,false
+Steve,false
+Jim,false
+Eva,false
+Tom,false
+Gwynet,false
+Jennifer,false
+Ben,false
 Carlos y Valeria,true
 Beyonce y Jay-z,true
 Angelina Jolie y Brad pitt,true

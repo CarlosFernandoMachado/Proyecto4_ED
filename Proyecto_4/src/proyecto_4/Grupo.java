@@ -18,6 +18,14 @@ public class Grupo {
     public Grupo() {
     }
 
+    public int getPeso() {
+        int peso = 0;
+        for (int i = 0; i < grupo.size(); i++) {
+            peso += grupo.get(i).getPeso();
+        }
+        return peso;
+    }
+
     public void reset() {
         grupo.clear();
     }
@@ -35,6 +43,32 @@ public class Grupo {
             Persona lider = grupo.get(0);
             for (int i = 1; i < grupo.size(); i++) {
                 grupo.get(i).presentar(lider);
+            }
+        }
+    }
+
+    public boolean tienepareja() {
+        for (int i = 0; i < grupo.size(); i++) {
+            if (grupo.get(i).isPareja()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Persona getlider() {
+        if (grupo.size() > 0) {
+            return grupo.get(0);
+        }
+        return null;
+    }
+
+    public void imprimir() {
+        for (int i = 0; i < grupo.size(); i++) {
+            if (i == 0) {
+                System.out.println("Lider: " + grupo.get(i).getNombre());
+            } else {
+                System.out.println(grupo.get(i).getNombre());
             }
         }
     }
