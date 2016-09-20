@@ -130,6 +130,16 @@ public class Proyecto_4 {
                     }
                     grupos.add(nuevogrupo);
                 }
+                for (int i = 0; i < Personas.size(); i++) {
+                    int menorpos = 0;
+                    for (int j = 1; j < grupos.size(); j++) {
+                        if (grupos.get(menorpos).getPeso() > grupos.get(j).getPeso()) {
+                            menorpos = j;
+                        }
+                    }
+                    grupos.get(menorpos).add(Personas.remove(i));
+                    i -= 1;
+                }
                 for (int i = 0; i < grupos.size(); i++) {
                     grupos.get(i).imprimir();
                     grupos.get(i).getlider().setContLider(Descanso);
