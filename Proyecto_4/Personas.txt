@@ -1,21 +1,20 @@
-Juan,false
-Alex,false
-Emma y Andrew,true
-Miguel,false
-Bryan,false
-Carlos y Valeria,true
-Oscar,false
-Inti,false
-Lester,false
-Beyonce y Jay-z,true
-Bill,false
-Steve,false
-Jim,false
-Angelina y Brad,true
-Eva,false
-Tom,false
-Gwynet,false
-Calista y Harrison,true
-Jennifer,false
-Ben,false
-
+Juan
+Alex
+Emma y Andrew
+Miguel
+Bryan
+Carlos y Valeria
+Oscar
+Inti
+Lester
+Beyonce y Jay-z
+Bill
+Steve
+Jim
+Angelina y Brad
+Eva
+Tom
+Gwynet
+Calista y Harrison
+Jennifer
+Ben

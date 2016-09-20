@@ -172,8 +172,11 @@ public class Proyecto_4 {
             fr = new FileReader("Personas.txt");
             br = new BufferedReader(fr);
             while ((cadena = br.readLine()) != null) {
-                String temp[] = cadena.split(",");
-                personas.add(new Persona(temp[0], Boolean.valueOf(temp[1])));
+                if (cadena.contains(" y ") || cadena.contains(" Y ")) {
+                    personas.add(new Persona(cadena,true));
+                }else{
+                    personas.add(new Persona(cadena,false));
+                }
             }
         } catch (Exception e) {
         }
