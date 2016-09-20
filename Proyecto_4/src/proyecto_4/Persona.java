@@ -42,6 +42,9 @@ public class Persona {
         return conocidos;
     }
 
+    public void presentar(Persona p){
+        conocidos.add(p);
+    }
     public int getPeso() {
         return peso;
     }
@@ -62,4 +65,9 @@ public class Persona {
         this.ContLider = ContLider;
     }
 
+    public void bajar(){
+        if (ContLider > 0) {
+            ContLider -= 1;
+        }
+    }
 }
