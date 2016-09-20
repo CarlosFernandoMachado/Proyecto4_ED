@@ -1,20 +1,21 @@
 Juan,false
 Alex,false
+Emma y Andrew,true
 Miguel,false
 Bryan,false
+Carlos y Valeria,true
 Oscar,false
 Inti,false
 Lester,false
+Beyonce y Jay-z,true
 Bill,false
 Steve,false
 Jim,false
+Angelina y Brad,true
 Eva,false
 Tom,false
 Gwynet,false
+Calista y Harrison,true
 Jennifer,false
 Ben,false
-Carlos y Valeria,true
-Beyonce y Jay-z,true
-Angelina Jolie y Brad pitt,true
-Calista Flockhart y Harrison Ford,true
-Emma Stone y Andrew Garfield,true
+

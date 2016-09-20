@@ -70,4 +70,8 @@ public class Persona {
             ContLider -= 1;
         }
     }
+    public void reset(){
+        conocidos.clear();
+        ContLider = 0;
+    }
 }
